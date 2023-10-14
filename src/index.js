@@ -15,9 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   newTaskForm.addEventListener("submit", (e) => {
     e.preventDefault();
     taskList.createNewTask(newTaskDescription.value);
-    if( document.getElementById("new-task-description").value === '' ){
-      alert('empty');
-    }
+
     e.target.reset();
     renderApp();
   });
@@ -28,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-
 
 
 class TaskList {
